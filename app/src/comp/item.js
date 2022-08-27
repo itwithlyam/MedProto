@@ -33,8 +33,8 @@ export default class Med extends React.Component {
                     <td>{this.props.soya === "Soya" ? "Yes" : "No"}</td>
                     <td>{this.props.milk === "Milk" ? "Yes" : "No"}</td>
                     <td>{this.props.type}</td>
-                    <td>{this.props.vegan}</td>
-                    <td>{this.props.vegetarian}</td>
+                    <td>{this.props.vegan === "N" ? "No" : "Yes"}</td>
+                    <td>{this.props.vegetarian === "Y" ? "Yes" : "No"}</td>
                     <td>{this.props.pregnancyAcceptable}</td>
                     <td>{this.props.manufacturerRecommendation}</td>
                     <td>{this.props.inactiveIngredients}</td>
