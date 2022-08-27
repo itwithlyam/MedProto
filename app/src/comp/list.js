@@ -2,21 +2,6 @@ import React from 'react'
 import meds from './data.txt'
 import Item from './item.js'
 
-// 0 Product name	
-// 1 Manufacture
-// 2 Content per capsule	
-// 3 Active ingredients	
-// 4 Soya	
-// 5 Milk	
-// 6 Type	
-// 7 Vegan	
-// 8 Vegetarian	
-// 9 Pregnancy acceptable	
-// 10 Manufacturer recommendation	
-// 11 inactive ingredients	
-// 12 Daily dosage - adult	
-// 13 Dosage - children
-
 export default class List extends React.Component {
     constructor(props) {
         super(props)
@@ -30,20 +15,6 @@ export default class List extends React.Component {
                 data = data.split("\n")
                 data.forEach((element, index) => { 
                     this.data[index] = element.split("\t") 
-                    // this.data[index] = `productName="${d[0]}
-                    //     manufacturer="${d[1]}
-                    //     contentPerCapsule="${d[2]}
-                    //     activeIngredients="${d[3]}
-                    //     soya="${d[4]}
-                    //     milk="${d[5]}
-                    //     type="${d[6]}
-                    //     vegan="${d[7]}
-                    //     vegetarian="${d[8]}
-                    //     pregnancyAcceptable="${d[9]}
-                    //     manufacturerRecommendation="${d[10]}
-                    //     inactiveIngredients="${d[11]}
-                    //     dailyDosageAdult="${d[12]}
-                    //     dosageChildren="${d[13]}`
                 })
            
         this.data.forEach((e, index) => {
@@ -79,10 +50,45 @@ export default class List extends React.Component {
             padding: 12px;
         }`
 
+        /*
+        Product name
+        Manufacturer
+        Content per capsule
+        Active ingredients
+        Capsule ingredients
+        Soya
+        Milk
+        Type
+        Vegan
+        Vegetarian
+        Pregnancy acceptable
+        Manufacturer recommendation
+        inactive ingredients
+        Daily dosage - adult
+        Dosage - children		
+        */
+
         return (
             <>
                 <style>{style}</style>
                 <table>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Manufacturer</th>
+                        <th>Content per capsule</th>
+                        <th>Active ingredients</th>
+                        <th>Capsule ingredients</th>
+                        <th>Soya</th>
+                        <th>Milk</th>
+                        <th>Type</th>
+                        <th>Vegan</th>
+                        <th>Vegetarian</th>
+                        <th>Allowed during pregnancy</th>
+                        <th>Manufacturer recommendations</th>
+                        <th>Inactive ingredients</th>
+                        <th>Daily dosage for Adults</th>
+                        <th>Daily dosage for Children</th>
+                    </tr>
                     {this.data}
                 </table>
             </>

@@ -1,20 +1,22 @@
 import React from 'react'
 
-// Product name	
-// Manufacture
-// Content per capsule	
-// Active ingredients	
-// Capsule ingredients
-// Soya	
-// Milk	
-// Type	
-// Vegan	
-// Vegetarian	
-// Pregnancy acceptable	
-// Manufacturer recommendation	
-// inactive ingredients	
-// Daily dosage - adult	
-// Dosage - children
+/*
+Product name
+Manufacturer
+Content per capsule
+Active ingredients
+Capsule ingredients
+Soya
+Milk
+Type
+Vegan
+Vegetarian
+Pregnancy acceptable
+Manufacturer recommendation
+inactive ingredients
+Daily dosage - adult
+Dosage - children		
+*/
 
 
 export default class Med extends React.Component {
@@ -28,8 +30,8 @@ export default class Med extends React.Component {
                     <td>{this.props.contentPerCapsule}</td>
                     <td>{this.props.activeIngredients}</td>
                     <td>{this.props.capsuleIngredients}</td>
-                    <td>{this.props.soya}</td>
-                    <td>{this.props.milk}</td>
+                    <td>{this.props.soya === "Soya" ? "Yes" : "No"}</td>
+                    <td>{this.props.milk === "Milk" ? "Yes" : "No"}</td>
                     <td>{this.props.type}</td>
                     <td>{this.props.vegan}</td>
                     <td>{this.props.vegetarian}</td>
