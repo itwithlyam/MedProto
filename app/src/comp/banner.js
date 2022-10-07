@@ -5,7 +5,10 @@ export default class Banner extends React.Component {
 		const style = `.row {
 			background-color: ${this.props.color};
 	 		text-align: center;
-			padding: 30px;
+			padding-left: 30px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			padding-right: 0px;
 		}`
 		
 		return (
