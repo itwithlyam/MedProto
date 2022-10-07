@@ -44,11 +44,16 @@ export default class List extends React.Component {
     render() {
         if (this.state.loading) return <h1>Loading, please wait...</h1>
         
-        let style = `table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 12px;
-        }`
+        let style = `
+            table, th, td {
+                border: 1px solid white;
+                border-collapse: collapse;
+                padding: 12px;
+            }
+            th, td {
+                background-color: lightblue;
+            }
+        `
 
         /*
         Product name
@@ -76,16 +81,12 @@ export default class List extends React.Component {
                         <th>Product Name</th>
                         <th>Manufacturer</th>
                         <th>Content per capsule</th>
-                        <th>Active ingredients</th>
-                        <th>Capsule ingredients</th>
-                        <th>Soya</th>
-                        <th>Milk</th>
+                        <th>Ingredients</th>
+                        <th>Allergens</th>
+                        <th>Diet</th>
                         <th>Type</th>
-                        <th>Vegan</th>
-                        <th>Vegetarian</th>
                         <th>Allowed during pregnancy</th>
                         <th>Manufacturer recommendations</th>
-                        <th>Inactive ingredients</th>
                         <th>Daily dosage for Adults</th>
                         <th>Daily dosage for Children</th>
                     </tr>
